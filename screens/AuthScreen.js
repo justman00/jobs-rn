@@ -1,12 +1,12 @@
-import React from "react";
-import { View, Text } from "react-native";
+import React from 'react'
+import { View, Text, AsyncStorage } from 'react-native'
 
-function AuthScreen() {
-  return (
-    <View>
-      <Text>AuthScreen</Text>
-    </View>
-  );
+import useAuth from '../hooks/useAuth'
+
+function AuthScreen(props) {
+  useAuth(props)
+
+  return <View />
 }
 
-export default AuthScreen;
+export default AuthScreen

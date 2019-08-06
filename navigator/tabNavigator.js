@@ -33,26 +33,35 @@ ReviewScreen.navigationOptions = ({ navigation }) => {
   };
 };
 
-const TabNavigator = createBottomTabNavigator({
-  welcome: {
-    screen: WelcomeScreen
+WelcomeScreen.navigationOptions = {
+  tabBarVisible: false
+};
+
+const TabNavigator = createBottomTabNavigator(
+  {
+    welcome: {
+      screen: WelcomeScreen
+    },
+    auth: {
+      screen: AuthScreen
+    },
+    main: {
+      screen: createBottomTabNavigator({
+        map: {
+          screen: MapScreen
+        },
+        deck: {
+          screen: DeckScreen
+        },
+        review: {
+          screen: ReviewStack
+        }
+      })
+    }
   },
-  auth: {
-    screen: AuthScreen
-  },
-  main: {
-    screen: createBottomTabNavigator({
-      map: {
-        screen: MapScreen
-      },
-      deck: {
-        screen: DeckScreen
-      },
-      review: {
-        screen: ReviewStack
-      }
-    })
+  {
+    lazy: true
   }
-});
+);
 
 export default createAppContainer(TabNavigator);
