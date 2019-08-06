@@ -1,13 +1,18 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import MapView from "react-native-maps";
+import { Provider } from "react-redux";
+
+import { configureStore } from "./store";
+
 import MainNavigator from "./navigator/tabNavigator";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <MainNavigator />
-    </View>
+    <Provider store={configureStore()}>
+      <View style={styles.container}>
+        <MainNavigator />
+      </View>
+    </Provider>
   );
 }
 
