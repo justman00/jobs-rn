@@ -1,0 +1,13 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "extends": ["plugin:react/recommended", "eslint-config-prettier"],
+  "rules": {
+    "react/prop-types": 0
+  },
+  "env": {
+    "browser": true
+  }
+}
