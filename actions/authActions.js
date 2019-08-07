@@ -1,5 +1,5 @@
-import { FACEBOOK_LOGIN_ATTEMPT } from "./types";
+import { FACEBOOK_LOGIN_ATTEMPT } from './types'
 
 export const facebookAuth = {
-  type: FACEBOOK_LOGIN_ATTEMPT
-};
+  type: FACEBOOK_LOGIN_ATTEMPT,
+}

@@ -1,10 +1,10 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Provider } from "react-redux";
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+import { Provider } from 'react-redux'
 
-import { configureStore } from "./store";
+import { configureStore } from './store'
 
-import MainNavigator from "./navigator/tabNavigator";
+import MainNavigator from './navigator/tabNavigator'
 
 export default function App() {
   return (
@@ -13,12 +13,12 @@ export default function App() {
         <MainNavigator />
       </View>
     </Provider>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff"
-  }
-});
+    backgroundColor: '#fff',
+  },
+})
